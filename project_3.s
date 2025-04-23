@@ -194,4 +194,7 @@ digits_done:
     sub  $v0, $t1, $t2
     j    ret_done
 
+ret_null:
+    li   $v0, 0x7FFFFFFF
+
 
