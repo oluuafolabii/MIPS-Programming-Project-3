@@ -197,4 +197,9 @@ digits_done:
 ret_null:
     li   $v0, 0x7FFFFFFF
 
+ret_done:
+    lw   $ra, 4($sp)
+    lw   $s0, 0($sp)
+    addi $sp, $sp, 8
+    jr   $ra
 
