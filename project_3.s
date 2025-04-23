@@ -185,4 +185,8 @@ store_digit:
 add_first:
     add  $t1, $t1, $t7
 
+next_char:
+    addi $t0, $t0, 1
+    j    digit_loop
+
 
