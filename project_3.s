@@ -189,4 +189,9 @@ next_char:
     addi $t0, $t0, 1
     j    digit_loop
 
+digits_done:
+    beq  $t3, $zero, ret_null
+    sub  $v0, $t1, $t2
+    j    ret_done
+
 
