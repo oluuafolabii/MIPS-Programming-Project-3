@@ -14,3 +14,8 @@ main:
     li   $v0, 4              # syscall: print_string
     syscall
 
+    la   $a0, strint
+    li   $a1, 1000
+    li   $v0, 8              # syscall: read_string
+    syscall
+
