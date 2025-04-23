@@ -63,4 +63,10 @@ after_print:
     blt  $s3, $s4, print_semi
     j    print_loop
 
+print_semi:
+    la   $a0, semicolon
+    li   $v0, 4
+    syscall
+    j    print_loop
+
 
