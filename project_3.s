@@ -19,3 +19,8 @@ main:
     li   $v0, 8              # syscall: read_string
     syscall
 
+    la   $t0, strint
+strip_nl:
+    lb   $t1, 0($t0)
+    beq  $t1, $zero, after_strip
+
