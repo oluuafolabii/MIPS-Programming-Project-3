@@ -177,4 +177,12 @@ check_upper:
     addi $t7, $t7, 10
     addi $t3, $t3, 1
 
+store_digit:
+    slti $t8, $t0, 5
+    bne  $t8, $zero, add_first
+    add  $t2, $t2, $t7
+    j    next_char
+add_first:
+    add  $t1, $t1, $t7
+
 
