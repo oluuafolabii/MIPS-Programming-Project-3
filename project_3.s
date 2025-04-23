@@ -122,4 +122,7 @@ proc_loop:
     add  $t1, $s0, $t0
     sw   $t5, 0($t1)
 
+    addi $s3, $s3, 1
+    j    proc_loop
+
 
