@@ -6,3 +6,7 @@ prompt:     .asciiz "Enter input string (max 1000 chars): "
 nullStr:    .asciiz "NULL"
 semicolon:  .asciiz ";"
 
+        .text
+        .globl main
+main:
+
