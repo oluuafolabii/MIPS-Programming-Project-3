@@ -125,4 +125,11 @@ proc_loop:
     addi $s3, $s3, 1
     j    proc_loop
 
+proc_end:
+    move $v0, $s4        # return # of chunks
+    lw   $ra, 24($sp)
+    lw   $s0, 20($sp)
+    lw   $s1, 16($sp)
+    lw   $s2, 12($sp)
+
 
