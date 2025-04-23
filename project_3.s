@@ -53,4 +53,9 @@ print_loop:
     syscall
     j    after_print
 
+print_null:
+    la   $a0, nullStr
+    li   $v0, 4            # syscall: print_string
+    syscall
+
 
