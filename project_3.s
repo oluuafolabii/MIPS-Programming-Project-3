@@ -160,4 +160,13 @@ digit_loop:
     addi $t3, $t3, 1
     j    store_digit
 
+check_lower:
+    li   $t5, 'a'; li $t6, 'w'
+    blt  $t4, $t5, check_upper
+    bgt  $t4, $t6, check_upper
+    sub  $t7, $t4, $t5
+    addi $t7, $t7, 10
+    addi $t3, $t3, 1
+    j    store_digit
+
 
