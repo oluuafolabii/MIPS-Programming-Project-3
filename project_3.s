@@ -48,3 +48,9 @@ print_loop:
     li   $t3, 0x7FFFFFFF
     beq  $t2, $t3, print_null
 
+    move $a0, $t2
+    li   $v0, 1            # syscall: print_int
+    syscall
+    j    after_print
+
+
