@@ -100,4 +100,8 @@ len_loop:
     j    len_loop
 len_done:
 
+    addi $t7, $t5, 9
+    li   $t8, 10
+    div  $t7, $t8
+    mflo $s4            # s4 = number of chunks
 
