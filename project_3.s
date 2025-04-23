@@ -105,3 +105,8 @@ len_done:
     div  $t7, $t8
     mflo $s4            # s4 = number of chunks
 
+    li   $s3, 0         # s3 = chunk index
+proc_loop:
+    beq  $s3, $s4, proc_end
+
+
