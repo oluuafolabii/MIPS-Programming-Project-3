@@ -89,4 +89,10 @@ process_string:
     move $s0, $a1      # s0 = array base
     move $s1, $a0      # s1 = input base
 
+    move $t0, $s1
+    li   $t5, 0
+len_loop:
+    lb   $t6, 0($t0)
+    beq  $t6, $zero, len_done
+
 
