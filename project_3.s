@@ -137,4 +137,10 @@ proc_end:
     addi $sp, $sp, 28
     jr   $ra
 
+get_substring_value:
+    addi $sp, $sp, -8
+    sw   $ra, 4($sp)
+    sw   $s0, 0($sp)
+    move $s0, $a0       # s0 = chunk ptr
+
 
