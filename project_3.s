@@ -36,4 +36,7 @@ after_strip:
     jal  process_string
     move $s4, $v0           # s4 = chunk count
 
+    li   $s3, 0             # s3 = print‐loop index
+print_loop:
+    beq  $s3, $s4, done_print
 
