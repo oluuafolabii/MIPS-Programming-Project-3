@@ -132,4 +132,9 @@ proc_end:
     lw   $s1, 16($sp)
     lw   $s2, 12($sp)
 
+    lw   $s3,  8($sp)
+    lw   $s4,  4($sp)
+    addi $sp, $sp, 28
+    jr   $ra
+
 
