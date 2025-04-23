@@ -169,4 +169,12 @@ check_lower:
     addi $t3, $t3, 1
     j    store_digit
 
+check_upper:
+    li   $t5, 'A'; li $t6, 'W'
+    blt  $t4, $t5, next_char
+    bgt  $t4, $t6, next_char
+    sub  $t7, $t4, $t5
+    addi $t7, $t7, 10
+    addi $t3, $t3, 1
+
 
