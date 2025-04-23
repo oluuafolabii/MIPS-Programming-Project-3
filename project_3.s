@@ -143,4 +143,9 @@ get_substring_value:
     sw   $s0, 0($sp)
     move $s0, $a0       # s0 = chunk ptr
 
+    li   $t0, 0         # index within chunk
+    li   $t1, 0         # sum_first
+    li   $t2, 0         # sum_second
+    li   $t3, 0         # valid_digit count
+
 
