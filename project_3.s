@@ -58,4 +58,9 @@ print_null:
     li   $v0, 4            # syscall: print_string
     syscall
 
+after_print:
+    addi $s3, $s3, 1
+    blt  $s3, $s4, print_semi
+    j    print_loop
+
 
