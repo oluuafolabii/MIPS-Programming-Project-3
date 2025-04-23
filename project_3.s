@@ -30,3 +30,10 @@ strip_nl:
 replace_nl:
     sb   $zero, 0($t0)
 
+after_strip:
+    la   $a0, strint
+    la   $a1, array
+    jal  process_string
+    move $s4, $v0           # s4 = chunk count
+
+
