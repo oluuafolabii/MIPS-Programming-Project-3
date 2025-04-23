@@ -40,3 +40,8 @@ after_strip:
 print_loop:
     beq  $s3, $s4, done_print
 
+    sll  $t0, $s3, 2
+    la   $t1, array
+    add  $t1, $t1, $t0
+    lw   $t2, 0($t1)
+
