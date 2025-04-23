@@ -69,4 +69,12 @@ print_semi:
     syscall
     j    print_loop
 
+done_print:
+    li   $v0, 11           # print_char
+    li   $a0, 10           # ASCII LF
+    syscall
+
+    li   $v0, 10           # exit
+    syscall
+
 
