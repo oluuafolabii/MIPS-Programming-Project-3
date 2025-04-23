@@ -118,4 +118,8 @@ proc_loop:
     jal  get_substring_value
     move $t5, $v0       # t5 = chunk’s G–H or NULL code
 
+    sll  $t0, $s3, 2
+    add  $t1, $s0, $t0
+    sw   $t5, 0($t1)
+
 
