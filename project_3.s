@@ -114,4 +114,8 @@ proc_loop:
     add  $t9, $t9, $s3     # t9 = s3*10
     add  $s2, $s1, $t9     # s2 = &strint[s3*10]
 
+    move $a0, $s2
+    jal  get_substring_value
+    move $t5, $v0       # t5 = chunk’s G–H or NULL code
+
 
