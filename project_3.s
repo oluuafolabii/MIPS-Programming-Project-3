@@ -77,4 +77,10 @@ done_print:
     li   $v0, 10           # exit
     syscall
 
+process_string:
+    addi $sp, $sp, -28
+    sw   $ra, 24($sp)
+    sw   $s0, 20($sp)
+    sw   $s1, 16($sp)
+
 
