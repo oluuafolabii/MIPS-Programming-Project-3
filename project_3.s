@@ -109,4 +109,9 @@ len_done:
 proc_loop:
     beq  $s3, $s4, proc_end
 
+    sll  $t9, $s3, 3
+    add  $t9, $t9, $s3
+    add  $t9, $t9, $s3     # t9 = s3*10
+    add  $s2, $s1, $t9     # s2 = &strint[s3*10]
+
 
