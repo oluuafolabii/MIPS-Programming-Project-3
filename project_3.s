@@ -95,4 +95,9 @@ len_loop:
     lb   $t6, 0($t0)
     beq  $t6, $zero, len_done
 
+    addi $t5, $t5, 1
+    addi $t0, $t0, 1
+    j    len_loop
+len_done:
+
 
