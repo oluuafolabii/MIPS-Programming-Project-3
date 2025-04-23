@@ -45,3 +45,6 @@ print_loop:
     add  $t1, $t1, $t0
     lw   $t2, 0($t1)
 
+    li   $t3, 0x7FFFFFFF
+    beq  $t2, $t3, print_null
+
