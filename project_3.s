@@ -83,4 +83,10 @@ process_string:
     sw   $s0, 20($sp)
     sw   $s1, 16($sp)
 
+    sw   $s2, 12($sp)
+    sw   $s3,  8($sp)
+    sw   $s4,  4($sp)
+    move $s0, $a1      # s0 = array base
+    move $s1, $a0      # s1 = input base
+
 
