@@ -24,3 +24,9 @@ strip_nl:
     lb   $t1, 0($t0)
     beq  $t1, $zero, after_strip
 
+    beq  $t1, 10, replace_nl  # ASCII 10 = '\n'
+    addi $t0, $t0, 1
+    j    strip_nl
+replace_nl:
+    sb   $zero, 0($t0)
+
