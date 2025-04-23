@@ -153,4 +153,11 @@ digit_loop:
     lb   $t4, 0($s0)
     addi $s0, $s0, 1
 
+    li   $t5, '0'; li $t6, '9'
+    blt  $t4, $t5, check_lower
+    bgt  $t4, $t6, check_lower
+    sub  $t7, $t4, $t5
+    addi $t3, $t3, 1
+    j    store_digit
+
 
