@@ -148,4 +148,9 @@ get_substring_value:
     li   $t2, 0         # sum_second
     li   $t3, 0         # valid_digit count
 
+digit_loop:
+    beq  $t0, 10, digits_done
+    lb   $t4, 0($s0)
+    addi $s0, $s0, 1
+
 
